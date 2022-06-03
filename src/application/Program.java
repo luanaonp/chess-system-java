@@ -22,7 +22,7 @@ public class Program {
 	
 		
 		
-		while(true) {
+		while(!chessmatch.getCheckMate()) {
 			try {
 				UI.clearScreen();
 				UI.printMatch(chessmatch,captured);
@@ -53,9 +53,10 @@ public class Program {
 			catch(InputMismatchException e) {
 				System.out.print(e.getMessage());
 				sc.nextLine();
-			}
-			
+			}			
 		}
+		UI.clearScreen();
+		UI.printMatch(chessmatch, captured);
 		
 	}
 
